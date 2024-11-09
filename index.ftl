@@ -71,5 +71,6 @@
             </div>
         </main>
     </div>
+    <@global.statistics />
 </body>
 </html>
