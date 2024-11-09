@@ -19,7 +19,7 @@
 <body class="bg-gradient-to-b from-blue-100 to-purple-200 min-h-screen flex items-center justify-center p-4">
     <div class="text-center">
         <div class="mb-8">
-            <img src="https://via.placeholder.com/200x200.png?text=404" alt="可爱的404图标" class="w-40 h-40 mx-auto rounded-full shadow-lg float">
+            <img src="https://via.placeholder.com/200x200.png?text=505" alt="可爱的505图标" class="w-40 h-40 mx-auto rounded-full shadow-lg float">
         </div>
         <h1 class="text-6xl font-bold text-purple-600 mb-4">哎呀!</h1>
         <p class="text-xl text-gray-700 mb-8">看起来这个页面被风吹走了~</p>
