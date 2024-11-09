@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - 页面未找到 | 凉风网</title>
+    <title>404 -o(╥﹏╥)o 页面未找到 | 凉风网</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes float {
