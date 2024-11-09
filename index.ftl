@@ -39,7 +39,7 @@
                  <div class="bg-white rounded-lg shadow-md overflow-hidden">
                     <a href="${post.fullPath!}">
                     <div class="aspect-video relative">
-                    <img :src="https://image.tmdb.org/t/p/original/p5AwpwkF6gcRJ04NEbtUQM7vJMN.jpg" :alt="${post.title}" class="absolute inset-0 w-full h-full object-cover" />
+                    <img src="https://image.tmdb.org/t/p/original/p5AwpwkF6gcRJ04NEbtUQM7vJMN.jpg" alt="${post.title}" class="absolute inset-0 w-full h-full object-cover" />
                     </div>
                     <div class="p-4">
                     <h3 class="text-xl font-semibold mb-2">${post.title}</h3>
