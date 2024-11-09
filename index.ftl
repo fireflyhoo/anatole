@@ -31,46 +31,25 @@
         <main>
             <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">热门文章</h2>
             <div id="articleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <#list posts.content as post>
                  <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <a href="${post.fullPath!}">
                     <div class="aspect-video relative">
-                    <img :src="https://via.placeholder.com/200x300.png" :alt="article.title" class="absolute inset-0 w-full h-full object-cover" />
+                    <img :src="https://via.placeholder.com/200x300.png" :alt="${post.title}" class="absolute inset-0 w-full h-full object-cover" />
                     </div>
                     <div class="p-4">
-                    <h3 class="text-xl font-semibold mb-2">{{ article.title }}</h3>
-                    <p class="text-gray-600">{{ article.summary }}</p>
+                    <h3 class="text-xl font-semibold mb-2">${post.title}</h3>
+                    <p class="text-gray-600">${post.summary!}</p>
                     </div>
+                    </a>
                 </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="aspect-video relative">
-                    <img :src="https://via.placeholder.com/200x300.png" :alt="article.title" class="absolute inset-0 w-full h-full object-cover" />
-                    </div>
-                    <div class="p-4">
-                    <h3 class="text-xl font-semibold mb-2">{{ article.title }}</h3>
-                    <p class="text-gray-600">{{ article.summary }}</p>
-                    </div>
-                </div>
-                  <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="aspect-video relative">
-                    <img :src="https://via.placeholder.com/200x300.png" :alt="article.title" class="absolute inset-0 w-full h-full object-cover" />
-                    </div>
-                    <div class="p-4">
-                    <h3 class="text-xl font-semibold mb-2">{{ article.title }}</h3>
-                    <p class="text-gray-600">{{ article.summary }}</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-md overflow-hidden">
-                    <div class="aspect-video relative">
-                    <img :src="https://via.placeholder.com/200x300.png" :alt="article.title" class="absolute inset-0 w-full h-full object-cover" />
-                    </div>
-                    <div class="p-4">
-                    <h3 class="text-xl font-semibold mb-2">{{ article.title }}</h3>
-                    <p class="text-gray-600">{{ article.summary }}</p>
-                    </div>
-                </div>
-            
+                </#list>
+
             </div>
             <div class="mt-8 flex justify-center">
                 <nav class="inline-flex rounded-md shadow">
+                <#if posts.totalPages gt 1>
+                    <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
                     <button id="prevPage" class="px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">
                         上一页
                     </button>
@@ -78,6 +57,8 @@
                     <button id="nextPage" class="px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">
                         下一页
                     </button>
+                    </@paginationTag>
+                </#if>
                 </nav>
             </div>
         </main>
