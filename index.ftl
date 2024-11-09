@@ -50,13 +50,21 @@
                 <nav class="inline-flex rounded-md shadow">
                 <#if posts.totalPages gt 1>
                     <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
-                    <button id="prevPage" class="px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">
-                        上一页
-                    </button>
+                     <#if pagination.hasPrev>
+                        <a href="${pagination.prevPageFullPath!}>
+                        <button id="prevPage" class="px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">
+                            上一页
+                        </button>
+                        </a>
+                    </#if>
                     <span id="pageInfo" class="px-4 py-2 border-t border-b border-gray-300 bg-white text-sm font-medium text-gray-700"></span>
-                    <button id="nextPage" class="px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">
-                        下一页
-                    </button>
+                     <#if pagination.hasNext>
+                     <a href="${pagination.nextPageFullPath!}">
+                        <button id="nextPage" class="px-4 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">
+                            下一页
+                        </button>
+                     </a>
+                     </#if>
                     </@paginationTag>
                 </#if>
                 </nav>
