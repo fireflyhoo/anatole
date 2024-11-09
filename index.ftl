@@ -40,6 +40,33 @@
                     <p class="text-gray-600">{{ article.summary }}</p>
                     </div>
                 </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="aspect-video relative">
+                    <img :src="https://via.placeholder.com/200x300.png" :alt="article.title" class="absolute inset-0 w-full h-full object-cover" />
+                    </div>
+                    <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">{{ article.title }}</h3>
+                    <p class="text-gray-600">{{ article.summary }}</p>
+                    </div>
+                </div>
+                  <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="aspect-video relative">
+                    <img :src="https://via.placeholder.com/200x300.png" :alt="article.title" class="absolute inset-0 w-full h-full object-cover" />
+                    </div>
+                    <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">{{ article.title }}</h3>
+                    <p class="text-gray-600">{{ article.summary }}</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="aspect-video relative">
+                    <img :src="https://via.placeholder.com/200x300.png" :alt="article.title" class="absolute inset-0 w-full h-full object-cover" />
+                    </div>
+                    <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">{{ article.title }}</h3>
+                    <p class="text-gray-600">{{ article.summary }}</p>
+                    </div>
+                </div>
             
             </div>
             <div class="mt-8 flex justify-center">
