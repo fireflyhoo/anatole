@@ -65,7 +65,7 @@
                         </button>
                      </a>
                      </#if>
-                    </@paginationTag>
+                </@paginationTag>
             </#if>        
        </main>
     </div>
