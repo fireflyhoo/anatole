@@ -66,7 +66,6 @@
        </header>
        <main>
         <div class="main">
-        <#include "module/page-top.ftl">
         <div class="autopagerize_page_element">
             <div class="content">
                 <div class="post-page">
