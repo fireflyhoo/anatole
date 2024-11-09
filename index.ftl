@@ -30,7 +30,18 @@
         </header>
         <main>
             <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">热门文章</h2>
-            <div id="articleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            <div id="articleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                 <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="aspect-video relative">
+                    <img :src="https://via.placeholder.com/200x300.png" :alt="article.title" class="absolute inset-0 w-full h-full object-cover" />
+                    </div>
+                    <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2">{{ article.title }}</h3>
+                    <p class="text-gray-600">{{ article.summary }}</p>
+                    </div>
+                </div>
+            
+            </div>
             <div class="mt-8 flex justify-center">
                 <nav class="inline-flex rounded-md shadow">
                     <button id="prevPage" class="px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">
