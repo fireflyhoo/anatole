@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>凉风网 - 文章列表</title>
+     <meta name="author" content="${user.nickname!}" />
+    <meta name="keywords" content="${meta_keywords!}"/>
+    <meta name="description" content="${meta_description!}" />
+    <@global.head />
+    <title>${title!}</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
@@ -35,7 +39,7 @@
                  <div class="bg-white rounded-lg shadow-md overflow-hidden">
                     <a href="${post.fullPath!}">
                     <div class="aspect-video relative">
-                    <img :src="https://via.placeholder.com/200x300.png" :alt="${post.title}" class="absolute inset-0 w-full h-full object-cover" />
+                    <img :src="https://image.tmdb.org/t/p/original/p5AwpwkF6gcRJ04NEbtUQM7vJMN.jpg" :alt="${post.title}" class="absolute inset-0 w-full h-full object-cover" />
                     </div>
                     <div class="p-4">
                     <h3 class="text-xl font-semibold mb-2">${post.title}</h3>
@@ -44,7 +48,6 @@
                     </a>
                 </div>
                 </#list>
-
             </div>
             <div class="mt-8 flex justify-center">
                 <nav class="inline-flex rounded-md shadow">
