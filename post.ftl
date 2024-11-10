@@ -13,6 +13,7 @@
     <link href="${theme_base!}/source/css/blog_basic.min.css?version=88107691fe" rel="stylesheet">
     <link href="${theme_base!}/source/css/style.min.css" type="text/css" rel="stylesheet" />
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/prismjs@1.19.0/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
     <style>
         table {
             border-spacing: 0;
