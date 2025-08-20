@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="author" content="${user.nickname!}" />
+    <meta name="author" content="${user.nickname!}" />
     <meta name="keywords" content="${meta_keywords!}"/>
     <meta name="description" content="${meta_description!}" />
     <@global.head />

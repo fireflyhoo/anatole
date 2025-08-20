@@ -37,7 +37,7 @@
     </section>
     <footer id="footer">
         <ul class="copyright">
-            <li>&copy; ${blog_title!}.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
+            <li>&copy; ${blog_title!}.</li><li>Design: HTML5 UP</li>
         </ul>
     </footer>
 </div>

@@ -15,7 +15,7 @@
        <header class="mb-8">
             <div class="flex items-center justify-between mb-6">
                 <div class="flex items-center space-x-4">
-                    <img src="https://via.placeholder.com/50" alt="凉风网 Logo" class="h-12 w-12">
+                    <img src="https://img.coollf.com/logo.png" alt="凉风网 Logo" class="h-12 w-12">
                     <h1 class="text-2xl font-bold text-gray-800">凉风网</h1>
                 </div>
                 <nav>
