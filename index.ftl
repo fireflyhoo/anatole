@@ -75,5 +75,35 @@
         </main>
     </div>
     <@global.statistics />
+    
+    <!-- 移动端菜单控制脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const menuClose = document.getElementById('menuClose');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            // 打开菜单
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden'; // 防止背景滚动
+            });
+            
+            // 关闭菜单
+            menuClose.addEventListener('click', function() {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = ''; // 恢复背景滚动
+            });
+            
+            // 点击菜单项后关闭菜单
+            const menuItems = mobileMenu.querySelectorAll('a');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
