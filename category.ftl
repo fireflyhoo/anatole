@@ -18,12 +18,38 @@
                     <img src="https://img.coollf.com/logo.png" alt="凉风网 Logo" class="h-12 w-12">
                     <h1 class="text-2xl font-bold text-gray-800">凉风网</h1>
                 </div>
-                <nav>
+                <!-- 移动端菜单按钮 -->
+                <button id="menuToggle" class="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-800 hover:bg-gray-100 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+                <!-- 桌面端导航菜单 -->
+                <nav class="hidden md:block">
                     <ul class="flex space-x-4">
                     <@menuTag method="list">
                         <#list menus?sort_by('priority') as menu>
                             <li>
                                 <a href="${menu.url!}" target="${menu.target!}" class="text-gray-600 hover:text-gray-800 transition-colors duration-200">${menu.name!} </a>
+                            </li>
+                        </#list>
+                    </@menuTag>
+                    </ul>
+                </nav>
+                <!-- 移动端导航菜单 -->
+                <nav id="mobileMenu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+                    <div class="flex justify-end p-4">
+                        <button id="menuClose" class="p-2 rounded-md text-gray-600 hover:text-gray-800 hover:bg-gray-100 focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="px-8 py-4">
+                    <@menuTag method="list">
+                        <#list menus?sort_by('priority') as menu>
+                            <li class="mb-4">
+                                <a href="${menu.url!}" target="${menu.target!}" class="text-xl text-gray-600 hover:text-gray-800 transition-colors duration-200 block py-2">${menu.name!} </a>
                             </li>
                         </#list>
                     </@menuTag>
@@ -70,5 +96,35 @@
        </main>
     </div>
        <@global.statistics />
+    
+    <!-- 移动端菜单控制脚本 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const menuClose = document.getElementById('menuClose');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            // 打开菜单
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.remove('translate-x-full');
+                document.body.style.overflow = 'hidden'; // 防止背景滚动
+            });
+            
+            // 关闭菜单
+            menuClose.addEventListener('click', function() {
+                mobileMenu.classList.add('translate-x-full');
+                document.body.style.overflow = ''; // 恢复背景滚动
+            });
+            
+            // 点击菜单项后关闭菜单
+            const menuItems = mobileMenu.querySelectorAll('a');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    mobileMenu.classList.add('translate-x-full');
+                    document.body.style.overflow = '';
+                });
+            });
+        });
+    </script>
     </body>
 </html>
