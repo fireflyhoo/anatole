@@ -78,7 +78,7 @@
             <div class="mt-8 flex justify-center">
                 <nav class="inline-flex rounded-md shadow">
                 <#if posts.totalPages gt 1>
-                    <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
+                    <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="5">
                     <#if pagination.hasPrev>
                         <a href="${pagination.prevPageFullPath!}">
                         <button id="prevPage" class="px-4 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed">
