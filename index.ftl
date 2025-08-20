@@ -34,7 +34,7 @@
         </header>
         <main>
             <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">热门文章</h2>
-            <div id="articleGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="articleGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
                 <#list posts.content as post>
                  <div class="bg-white rounded-lg shadow-md overflow-hidden">
                     <a href="${post.fullPath!}">
